@@ -7,25 +7,25 @@ It has improved the ASR performance on [Robust Automatic Transcription of Speech
 
 
 <div align=center>
-<img width=460 src="https://user-images.githubusercontent.com/90536618/196660977-bfa0dfed-3f73-4625-96a6-d9ee22fa72e5.png">
+<img width=470 src="https://user-images.githubusercontent.com/90536618/196660977-bfa0dfed-3f73-4625-96a6-d9ee22fa72e5.png">
 </div>
-
+&emsp;
 
 Figure (a): Multi-task learning of speech enhancement (SE) and automatic speech recognition (ASR);
 
-Figure (b): In case the SE and ASR gradients are conflicting (i.e., their angle is larger than $90^\circ$), we project the SE gradient onto a dynamic surface at acute angle $\theta$ to ASR gradient, in order to 1) remove conflict and 2) push SE gradient to assist in ASR optimization;
+Figure (b): In case the SE and ASR gradients are conflicting (i.e., the angle between them is larger than $90^\circ$), we project the SE gradient onto a dynamic surface at acute angle $\theta$ to ASR gradient, in order to 1) remove conflict and 2) push SE gradient to assist in ASR optimization;
 
 Figure (c): In case of wrongly dominant SE gradient (i.e., $\Vert G_\text{SE} \Vert_2 > K \cdot \Vert G_\text{ASR} \Vert_2$ , $K>1$ is threshold), we adaptively rescale the magnitude of two gradients to prevent dominant ASR task being misled by SE gradient.
 
 ## Usage
 
-Our code implementation is based on [ESPnet](https://github.com/espnet/espnet). You can intall it directly using our provided ESPnet(v.0.9.6) folder, or install from official website and then add files from our repo. Use the command `pip install -e .` to install ESPnet.
+Our code implementation is based on [ESPnet](https://github.com/espnet/espnet). You can intall it directly using our provided ESPnet(v.0.9.6) folder, or install from official website and then add files from our repo. Kindly use the command `pip install -e .` to install ESPnet.
 
-In our folder, the running scripts are at `egs2/rats_chA/asr_with_enhancement/{run_rats_chA_dpsl_asr, rats_chA_dpsl_asr}.sh`, and the network code are at `espnet2/{asr/, enh/, layers/}`. 
+In our folder, the running scripts are at `egs2/rats_chA/asr_with_enhancement/{run_rats_chA_gradient_remedy, rats_chA_gradient_remedy}.sh`, the network code are at `espnet2/{asr/, enh/, layers/}`, and the optimization code is at `espnet2/train/`.
 
 **Tips**: 
 
-1. To go over the entire project, please start from the script `egs2/rats_chA/asr_with_enhancement/run_rats_chA_dpsl_asr.sh`
-2. To read the network code only, please start from the script `espnet2/asr/dpsl_asr.py`
+1. To go over the entire project, please start from the script `egs2/rats_chA/asr_with_enhancement/run_rats_chA_gradient_remedy.sh` [[link]](https://github.com/YUCHEN005/Gradient-Remedy/blob/master/egs2/rats_chA/asr_with_enhancement/run_rats_chA_gradient_remedy.sh)
+2. To read the code of Gradient Remedy, please refer to the script `espnet2/train/trainer_gradient_remedy.py` (line 455-474) [[link]](https://github.com/YUCHEN005/Gradient-Remedy/blob/master/espnet2/train/trainer_gradient_remedy.py)
 
 
