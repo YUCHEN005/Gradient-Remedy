@@ -5,9 +5,8 @@
 Gradient Remedy is a novel method to solve the gradient interference problem in multi-task learning for noise-robust ASR, i.e., conflicting gradients and wrongly dominant gradients.
 It has improved the ASR performance on [Robust Automatic Transcription of Speech (RATS)](https://github.com/YUCHEN005/RATS-Channel-A-Speech-Data) and [CHiME-4](https://spandh.dcs.shef.ac.uk/chime_challenge/CHiME4/data.html) datasets.
 
-
 <div align=center>
-<img width=470 src="https://user-images.githubusercontent.com/90536618/196660977-bfa0dfed-3f73-4625-96a6-d9ee22fa72e5.png">
+<img width=470 src="https://user-images.githubusercontent.com/90536618/196681399-f093065a-3451-4d9d-b950-394c96625f20.png">
 </div>
 
 Figure (a): Multi-task learning of speech enhancement (SE) and automatic speech recognition (ASR);
