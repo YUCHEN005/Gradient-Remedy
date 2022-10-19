@@ -24,6 +24,6 @@ In our folder, the running scripts are at `egs2/rats_chA/asr_with_enhancement/{r
 **Tips**: 
 
 1. To go over the entire project, please start from the script `egs2/rats_chA/asr_with_enhancement/run_rats_chA_gradient_remedy.sh` [[link]](https://github.com/YUCHEN005/Gradient-Remedy/blob/master/egs2/rats_chA/asr_with_enhancement/run_rats_chA_gradient_remedy.sh)
-2. To read the core code of Gradient Remedy, please refer to the script `espnet2/train/trainer_gradient_remedy.py` (line 455-475) [[link]](https://github.com/YUCHEN005/Gradient-Remedy/blob/master/espnet2/train/trainer_gradient_remedy.py)
+2. To read the core code of Gradient Remedy, please refer to the script `espnet2/train/trainer_gradient_remedy.py` (line 455-475) [[link]](https://github.com/YUCHEN005/Gradient-Remedy/blob/master/espnet2/train/trainer_gradient_remedy.py#L455)
 
 
