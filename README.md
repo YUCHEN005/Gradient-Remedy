@@ -1,39 +1,21 @@
-# DPSL-ASR (Dual-Path Style Learning for End-to-End Noise-Robust Automatic Speech Recognition)
-
-[Dual-Path Style Learning for End-to-End Noise-Robust Speech Recognition](https://arxiv.org/abs/2203.14838)
-
-[Interactive Feature Fusion for End-to-End Noise-Robust Speech Recognition](https://arxiv.org/abs/2110.05267)
+# Gradient Remedy for Multi-Task Learning in End-to-End Noise-Robust Speech Recognition
 
 ## Introduction
 
-DPSL-ASR is a novel method for end-to-end noise-robust speech recognition. It extends our prior work IFF-Net (Interactive Feature Fusion Network) with dual-path inputs and style learning, which achieves better ASR performance on [RATS Channel-A dataset](https://github.com/YUCHEN005/RATS-Channel-A-Speech-Data) and CHiME-4 1-Channel Track Dataset.
+Gradient Remedy is a novel method to solve the gradient interference problem in multi-task learning for noise-robust ASR, i.e., conflicting gradients and wrongly dominant gradients.
+It has improved the ASR performance on [Robust Automatic Transcription of Speech (RATS)](https://github.com/YUCHEN005/RATS-Channel-A-Speech-Data) and [CHiME-4](https://spandh.dcs.shef.ac.uk/chime_challenge/CHiME4/data.html) datasets.
 
-<img width=510 src="https://user-images.githubusercontent.com/90536618/196597886-bd3af18c-0cd7-4852-8066-5b5872531b0c.png"> &emsp; <img width=290 src="https://user-images.githubusercontent.com/90536618/196597890-55bdcd9a-e958-476a-b1d3-248b1ba563ea.png">
+
+<div align=center>
+<img width=480 src="https://user-images.githubusercontent.com/90536618/196660977-bfa0dfed-3f73-4625-96a6-d9ee22fa72e5.png">
+</div>
 
 
-Left figure: (a) joint SE-ASR approach, (b) IFF-Net baseline, (c) the proposed DPSL-ASR approach.
+Figure (a): Multi-task learning of speech enhancement (SE) and automatic speech recognition (ASR);
 
-Right figure: back-end ASR module with style learning and consistency loss in our DPSL-ASR. The dashed lines denote sharing parameters.
+Figure (b): In case the SE and ASR gradients are conflicting (i.e., their angle is larger than $90^\circ$), we project the SE gradient onto a dynamic surface at acute angle $\theta$ to ASR gradient, in order to 1) remove conflict and 2) push SE gradient to assist in ASR optimization;
 
-If you find DPSL-ASR useful in your research, please use the following BibTeX entry for citation:
-
-```bash
-@article{hu2022dual,
-  title={Dual-Path Style Learning for End-to-End Noise-Robust Speech Recognition}, 
-  author={Hu, Yuchen and Hou, Nana and Chen, Chen and Chng, Eng Siong},
-  journal={arXiv preprint arXiv:2203.14838},
-  year={2022}
-}
-
-@inproceedings{hu2022interactive,
-  title={Interactive Feature Fusion for End-to-End Noise-Robust Speech Recognition},
-  author={Hu, Yuchen and Hou, Nana and Chen, Chen and Chng, Eng Siong},
-  booktitle={ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
-  pages={6292--6296},
-  year={2022},
-  organization={IEEE}
-}
-```
+Figure (c): In case of wrongly dominant SE gradient (i.e., $\Vert G_\text{SE} \Vert_2 > K \cdot \Vert G_\text{ASR} \Vert_2$ , $K>1$ is threshold), we adaptively rescale the magnitude of two gradients to prevent dominant ASR task being misled by SE gradient.
 
 ## Usage
 
