@@ -9,7 +9,6 @@ It has improved the ASR performance on [Robust Automatic Transcription of Speech
 <div align=center>
 <img width=470 src="https://user-images.githubusercontent.com/90536618/196660977-bfa0dfed-3f73-4625-96a6-d9ee22fa72e5.png">
 </div>
-&emsp;
 
 Figure (a): Multi-task learning of speech enhancement (SE) and automatic speech recognition (ASR);
 
