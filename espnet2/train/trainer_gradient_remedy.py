@@ -450,9 +450,10 @@ class Trainer:
                     loss_asr.backward()
 
             for i, (key, params) in enumerate(model.named_parameters()):
-                if key.startswith('enh_model'):
-
-                    ### Gradient Projection
+                if key.startswith('enh_model'): 
+                    
+                    #### Gradient Remedy
+                    ## Gradient Projection
                     enh_grad = enh_grads[i].clone().view(-1)
                     asr_grad = params.grad.data.clone().view(-1)
                     asr_unit = asr_grad / asr_grad.norm()
@@ -464,7 +465,7 @@ class Trainer:
                         enh_grad = enh_grad - enh_asr_dot * asr_grad / (asr_grad.norm() ** 2)   # remove conflict component in G_SE
                         enh_grad = enh_grad + (enh_grad.norm() / tan_theta) * asr_unit          # push G_SE to assist in ASR
 
-                    ### Gradient Rescale
+                    ## Gradient Rescale
                     enh_mag, asr_mag = enh_grad.norm(), asr_grad.norm()
                     cos_theta_prime = torch.dot(enh_grad, asr_grad) / (enh_mag * asr_mag)
                     if enh_mag / asr_mag > K and not cos_theta_prime == 0:
