@@ -17,7 +17,7 @@ Figure (c): In case of wrongly dominant SE gradient (i.e., $\Vert G_\text{SE} \V
 
 ## Usage
 
-Our code implementation is based on [ESPnet](https://github.com/espnet/espnet)(v.0.9.6), please kindly use the following commands for installation.
+Our code implementation is based on [ESPnet](https://github.com/espnet/espnet) (v.0.9.6), please kindly use the following commands for installation.
 
 ```bash
 git clone https://github.com/YUCHEN005/Gradient-Remedy.git
