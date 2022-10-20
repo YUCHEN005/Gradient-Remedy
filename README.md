@@ -17,7 +17,13 @@ Figure (c): In case of wrongly dominant SE gradient (i.e., $\Vert G_\text{SE} \V
 
 ## Usage
 
-Our code implementation is based on [ESPnet](https://github.com/espnet/espnet). You may intall it directly using our provided ESPnet(v.0.9.6) folder, or install from official website and then add files from our repo. Kindly use the command `pip install -e .` to install ESPnet.
+Our code implementation is based on [ESPnet](https://github.com/espnet/espnet)(v.0.9.6), please kindly use the following commands for installation.
+
+```bash
+git clone https://github.com/YUCHEN005/Gradient-Remedy.git
+cd Gradient-Remedy
+pip install -e .
+```
 
 In our folder, the running scripts are at `egs2/rats_chA/asr_with_enhancement/{run_rats_chA_gradient_remedy, rats_chA_gradient_remedy}.sh`, the network code are at `espnet2/{asr/, enh/, layers/}`, and the optimization code are at `espnet2/train/`.
 
