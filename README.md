@@ -1,5 +1,7 @@
 # Gradient Remedy for Multi-Task Learning in End-to-End Noise-Robust Speech Recognition
 
+[Gradient Remedy for Multi-Task Learning in End-to-End Noise-Robust Speech Recognition](https://arxiv.org/abs/2302.11362)
+
 ## Introduction
 
 Gradient Remedy is a novel method to solve the gradient interference problem in multi-task learning for noise-robust ASR, i.e., conflicting gradients and wrongly dominant gradients.
