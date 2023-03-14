@@ -38,11 +38,8 @@ cd Gradient-Remedy
 pip install -e .
 ```
 
-In our folder, the running scripts are at `egs2/rats_chA/asr_with_enhancement/{run_rats_chA_gradient_remedy, rats_chA_gradient_remedy}.sh`, the network code are at `espnet2/{asr/, enh/, layers/}`, and the optimization code are at `espnet2/train/`.
+In our repository, the experiment folder is `egs2/rats_chA/asr_with_enhancement/`, the network code are at `espnet2/{asr/, enh/, layers/}`, and the optimization code are at `espnet2/train/`.
 
-**Tips**: 
-
-1. To go over the entire project, please refer to the script `egs2/rats_chA/asr_with_enhancement/run_rats_chA_gradient_remedy.sh` [[link]](https://github.com/YUCHEN005/Gradient-Remedy/blob/master/egs2/rats_chA/asr_with_enhancement/run_rats_chA_gradient_remedy.sh)
-2. To read the core code of Gradient Remedy, please refer to the script `espnet2/train/trainer_gradient_remedy.py` (line 455-475) [[link]](https://github.com/YUCHEN005/Gradient-Remedy/blob/master/espnet2/train/trainer_gradient_remedy.py#L455)
+The core code of Gradient Remedy is at `espnet2/train/trainer_gradient_remedy.py` (line 455-475) [[link]](https://github.com/YUCHEN005/Gradient-Remedy/blob/master/espnet2/train/trainer_gradient_remedy.py#L455)
 
 
