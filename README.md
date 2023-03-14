@@ -30,15 +30,7 @@ If you find this work useful in your research, please kindly use the following B
 
 ## Usage
 
-Our code implementation is based on [ESPnet](https://github.com/espnet/espnet) (v.0.9.6), please kindly use the following commands for installation.
-
-```bash
-git clone https://github.com/YUCHEN005/Gradient-Remedy.git
-cd Gradient-Remedy
-pip install -e .
-```
-
-In our repository, the experiment folder is `egs2/rats_chA/asr_with_enhancement/`, the network code are at `espnet2/{asr/, enh/, layers/}`, and the optimization code are at `espnet2/train/`.
+Our code implementation is based on [ESPnet](https://github.com/espnet/espnet) (v.0.9.6), where the experiment folder is `egs2/rats_chA/asr_with_enhancement/`, the network code are at `espnet2/{asr/, enh/, layers/}`, and the optimization code are at `espnet2/train/`.
 
 The core code of Gradient Remedy is at `espnet2/train/trainer_gradient_remedy.py` (line 455-475) [[link]](https://github.com/YUCHEN005/Gradient-Remedy/blob/master/espnet2/train/trainer_gradient_remedy.py#L455)
 
